@@ -1,0 +1,162 @@
+@import "style.less";
+
+#wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen {
+    @media (min-width: 1921px) {
+        #wrapper {
+            width: 1920px;
+        }
+    }
+
+    @media (max-width: 1279px) {
+        #wrapper {
+            .flex-column;
+        }
+
+        #header {
+            margin-top: 45px;
+            padding: 20px 125px 20px 90px;
+            .calc(width, 100%, 215px);
+        }
+
+        #banner {
+            width: 100vw;
+            height: 640px;
+
+            .title {
+                top: 0;
+                left: 90px;
+                .flex-column;
+                .align-items-top;
+
+                h2 {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        #content {
+            width: 100vw;
+            margin-bottom: 45px;
+
+            .title {
+                margin-left: 90px;
+                .flex-column;
+                .align-items-top;
+
+                .sep-line {
+                    left: 0;
+                }
+
+                h1 {
+                    margin-left: 0;
+                    margin-top: 65px;
+                }
+            }
+
+            .text, .submit-form {
+                padding: 38px 90px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        #header {
+            padding: 20px 0;
+            width: 100%;
+            .space-center;
+
+            img:first-child {
+                display: none;
+            }
+        }
+
+        #content {
+            width: 100vw;
+            margin-bottom: 45px;
+
+            .text {
+                column-count: 1;
+            }
+        }
+    }
+
+    @media (max-width: 599px) {
+
+        #header {
+            height: 100px;
+            margin-top: 20px;
+
+            img {
+                height: 100px;
+            }
+        }
+
+        #banner {
+            height: 320px;
+
+            .title {
+                left: 20px;
+
+                h2 {
+                    font-size: 22px;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        #content {
+            margin-bottom: 20px;
+
+            .title {
+                margin-left: 20px;
+
+                h1 {
+                    margin-top: 30px;
+                }
+            }
+
+            .text, .submit-form {
+                padding: 20px;
+
+                p, b {
+                    font-size: 15px;
+                    line-height: 19px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .submit-form {
+                ul {
+                    li {
+                        font-size: 15px;
+                        line-height: 19px;
+                    }
+                }
+
+                #input-box {
+                    width: 280px;
+
+                    input[type="email"] {
+                        width: 130px;
+                    }
+
+                    input[type="submit"] {
+                        width: 110px;
+                    }
+                }
+            }
+        }
+
+        .sep-line {
+            height: 50px;
+            width: 10px;
+        }
+    }
+
+}
